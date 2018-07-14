@@ -96,7 +96,7 @@ cat("Total number of records in categories ",nrow(cmb_df_categories),"\n")
 
 ### Saving in MS SQL Server
 #SQL Connection
-connection_str<-"Driver={SQL Server Native Client 11.0};server=JASONSERVER\\TORONTOSQL;database=yelp;trusted_connection=no;uid=jason;pwd=lj7767"
+connection_str<-"Driver={SQL Server Native Client 11.0};server=JASONSERVER\\TORONTOSQL;database=yelp;trusted_connection=no;uid= ;pwd= "
 dcon<-odbcDriverConnect(connection=connection_str)
 
 sqlSave(dcon,cmb_df_base,tablename='rest_business',append=T,rownames=F,nastring=NULL,safer=T,fast=F)
